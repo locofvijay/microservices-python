@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: order-api-config
+  namespace: order
+data:
+  APP_NAME: "order-api"
+  LOG_LEVEL: "INFO"

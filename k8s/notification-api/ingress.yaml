@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: notification-api-ingress
+  namespace: notification
+spec:
+  rules:
+    - host: notification-api.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: notification-api
+                port:
+                  number: 80
